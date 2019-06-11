@@ -1,0 +1,8 @@
+Membors: Lucas Silva da Costa, 18200432
+
+Descrição do trabalho: 
+	Uma interface como uma mesa de cassino, vários jogos diferentes de cartas. Após as partidas sua pontuação é salva num arquivo externo. Jogos previstos: Poker e Blackjack, mas possivelmente mais jogos serão adicionados. É possível, através do menu, ver tutorial para os jogos assim como seu histórico de pontuação.
+
+Lista de Funcionalidades: jogar, tutorial, voltar, histórico, embaralhar, pedirMaisCartas, entre outras ações específicas de cada jogo.
+
+
