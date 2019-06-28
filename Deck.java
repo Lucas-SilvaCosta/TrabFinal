@@ -1,5 +1,6 @@
-import java.util.List;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 
 public class Deck{
 	public static final String[] suits = {"Spades", "Hearts", "Diamonds", "Clubs"};
@@ -9,20 +10,25 @@ public class Deck{
 
 	public Deck(){}
 
-	public List<Card> createNormalDeck(){
+	public ArrayList<Card> createNormalDeck(){
 		Card[] deck = new Card[52];
 		for(int i=0; i<suits.length; i++){
 			for(int j=0; j<numbers.length; j++){
 				deck[(i*13)+j] = new Card(suits[i], numbers[j]);
 			}
 		}
-		return Arrays.asList( deck );
+		ArrayList<Card> aux = new ArrayList<Card>(Arrays.asList( deck ));
+		return aux;
 	}
 
-	public void printDeck(List<Card> deck){
+	public void printDeck(ArrayList<Card> deck){
 		for(int i=0; i<deck.size(); i++){
 			//System.out.println(deck[i].getNumber()+" of "+deck[i].getSuit());
 			System.out.printf("%-5s of %-10s\n", deck.get(i).getNumber(), deck.get(i).getSuit());
 		}
+	}
+
+	public void shuffleDeck(ArrayList<Card> deck){
+		Collections.shuffle(deck);
 	}
 }
