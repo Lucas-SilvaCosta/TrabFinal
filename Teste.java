@@ -1,4 +1,4 @@
-import java.util.List;
+import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.Collections;
 
@@ -6,7 +6,7 @@ public class Teste{
 
 	public static void main(String args[]){
 		Deck d = new Deck();
-		List<Card> myDeck = d.createNormalDeck();
+		ArrayList<Card> myDeck = d.createNormalDeck();
 
 		d.printDeck(myDeck);
 		System.out.println("\nShuffle? y/n");
@@ -14,7 +14,7 @@ public class Teste{
 		String aux = scan.next();
 		System.out.println("\n\n");
 		if(aux.equals("y")){
-			Collections.shuffle(myDeck);
+			d.shuffleDeck(myDeck);
 			d.printDeck(myDeck);
 		}
 	}

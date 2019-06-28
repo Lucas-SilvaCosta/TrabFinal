@@ -27,7 +27,7 @@ public class FrameTutorial extends JFrame{
 		descricao.setUI(MultiLineLabelUI.labelUI);
 		descricao.setFont(new Font("Serif", Font.PLAIN, 18));
 		descPanel.setPreferredSize(new Dimension(400, 200));
-		descricao.setBackground(Color.WHITE);
+		descPanel.setBackground(new Color(0,153,25));
 		descPanel.add(descricao);
 		add(descPanel);
 
