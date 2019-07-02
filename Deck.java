@@ -6,6 +6,7 @@ public class Deck{
 	public static final String[] suits = {"Spades", "Hearts", "Diamonds", "Clubs"};
 	public static final String[] numbers = {"Ace", "Two", "Three", "Four", "Five", "Six",
 		"Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King"};
+	public static final int[] values = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13};
 
 
 	public Deck(){}
@@ -14,7 +15,7 @@ public class Deck{
 		Card[] deck = new Card[52];
 		for(int i=0; i<suits.length; i++){
 			for(int j=0; j<numbers.length; j++){
-				deck[(i*13)+j] = new Card(suits[i], numbers[j]);
+				deck[(i*13)+j] = new Card(suits[i], numbers[j], values[j]);
 			}
 		}
 		ArrayList<Card> aux = new ArrayList<Card>(Arrays.asList( deck ));
