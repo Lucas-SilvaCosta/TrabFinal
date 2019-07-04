@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import javax.swing.ImageIcon;
+
 
 public class Deck{
 	public static final String[] suits = {"Spades", "Hearts", "Diamonds", "Clubs"};
@@ -11,11 +13,11 @@ public class Deck{
 
 	public Deck(){}
 
-	public ArrayList<Card> createNormalDeck(){
+	public ArrayList<Card> createNormalDeck(boolean red){
 		Card[] deck = new Card[52];
 		for(int i=0; i<suits.length; i++){
 			for(int j=0; j<numbers.length; j++){
-				deck[(i*13)+j] = new Card(suits[i], numbers[j], values[j]);
+				deck[(i*13)+j] = new Card(suits[i], numbers[j], values[j], new ImageIcon(getClass().getResource("cartas\\"+numbers[j]+suits[i]+".png")), red);
 			}
 		}
 		ArrayList<Card> aux = new ArrayList<Card>(Arrays.asList( deck ));

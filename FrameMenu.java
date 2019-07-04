@@ -36,7 +36,7 @@ public class FrameMenu extends JFrame{
 		jogar.addActionListener(bListener);
 		tutoriais = new JButton("Tutoriais");
 		tutoriais.addActionListener(bListener);
-		historico = new JButton("Histórico");
+		historico = new JButton("Historico");
 		historico.addActionListener(bListener);
 		//System.out.println(tutoriais.getPreferredSize());
 		jogar.setMaximumSize(tutoriais.getPreferredSize());

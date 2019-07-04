@@ -61,11 +61,12 @@ public class FrameSelectGame extends JFrame{
             for(int i=0; i<jogos.length; i++){
 	            if(e.getSource() == but[i]){
 	            	if(informaBotaoClicado == 0){
-	            		System.out.println("certo");
+	            		dispose();
+	            		jogos[i].jogar();
 	            	}
 	            	if(informaBotaoClicado == 1){
 	            		dispose();
-	            		jogos[i].Tutorial();
+	            		jogos[i].tutorial();
 	            	}
 	            }
 	        }

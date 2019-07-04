@@ -1,21 +1,21 @@
-import java.util.ArrayList;
-import java.util.Scanner;
-import java.util.Collections;
+import java.awt.Dimension;
+import javax.swing.*;
 
-public class Teste{
+public class Teste extends JFrame{
+
+	public Teste(){
+		super("Teste");
+		JLabel teste= new JLabel(new ImageIcon(getClass().getResource("cartas\\AceClubs.png")));
+		teste.setIcon(new ImageIcon(getClass().getResource("cartas\\TwoClubs.png")));
+		teste.setPreferredSize(new Dimension(110, 180));
+		teste.setMaximumSize(new Dimension(110, 180));
+		add(teste);
+	}
 
 	public static void main(String args[]){
-		Deck d = new Deck();
-		ArrayList<Card> myDeck = d.createNormalDeck();
-
-		d.printDeck(myDeck);
-		System.out.println("\nShuffle? y/n");
-		Scanner scan = new Scanner( System.in );
-		String aux = scan.next();
-		System.out.println("\n\n");
-		if(aux.equals("y")){
-			d.shuffleDeck(myDeck);
-			d.printDeck(myDeck);
-		}
+		Teste t = new Teste();
+		t.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		t.setSize(400, 200);
+		t.setVisible(true);
 	}
 }

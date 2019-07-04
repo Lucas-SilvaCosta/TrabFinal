@@ -6,8 +6,13 @@ public class Blackjack extends Jogos{
 	}
 
 	@Override
-	public void Tutorial(){
+	public void tutorial(){
 		FrameTutorial f = new FrameTutorial(super.getNome(), super.getTutorial());
 		f.create(f);
+	}
+
+	public void jogar(){
+		FrameBlackjack f = new FrameBlackjack();
+		f.create();
 	}
 }
