@@ -13,9 +13,9 @@ public class Card{
 		value = v;
 		imgFrente = i;
 		if(red){
-			imgTras = new ImageIcon(getClass().getResource("cartas\\Red.png"));
+			imgTras = new ImageIcon(getClass().getResource("cartas/Red.png"));
 		}else{
-			imgTras = new ImageIcon(getClass().getResource("cartas\\Blue.png"));
+			imgTras = new ImageIcon(getClass().getResource("cartas/Blue.png"));
 		}
 	}
 
@@ -25,5 +25,5 @@ public class Card{
 	public String getName(){ return number+" of "+suit; }
 	public Icon getImgFrente(){ return imgFrente; }
 	public Icon getImgTras(){ return imgTras; }
-	public void changeBack(){ imgTras = new ImageIcon(getClass().getResource("cartas\\Red.png")); }
+	public void changeBack(){ imgTras = new ImageIcon(getClass().getResource("cartas/Red.png")); }
 }

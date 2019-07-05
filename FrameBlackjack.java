@@ -53,7 +53,7 @@ public class FrameBlackjack extends JFrame{
 		JPanel panelDeckComp = new JPanel();
 		panelDeckComp.setLayout(new BoxLayout(panelDeckComp, BoxLayout.Y_AXIS));
 		panelDeckComp.setBackground(new Color(0,153,25));
-		labelDeck = new JLabel("Deck");
+		labelDeck = new JLabel(doubleDeck.get(0).getImgTras());
 		labelDeck.setPreferredSize(new Dimension(110, 180));
 		labelDeck.setMaximumSize(new Dimension(110, 180));
 		labelDeck.setOpaque(true);
@@ -188,6 +188,7 @@ public class FrameBlackjack extends JFrame{
 		doubleDeck.remove(0);
 		mao.trimToSize();
 		doubleDeck.trimToSize();
+		labelDeck.setIcon(doubleDeck.get(0).getImgTras());
 		//deckManager.printDeck(mao);
 	}
 
@@ -251,10 +252,10 @@ public class FrameBlackjack extends JFrame{
 		}
 
 		for(int i=0; i<plays.length; i++){
-			System.out.print("plays["+i+"] = "+plays[i]+";   ");
+			//System.out.print("plays["+i+"] = "+plays[i]+";   ");
 			if(plays[i] >= 17 && plays[i] <= 21){ cpuDone = true; }
 		}
-		System.out.println();
+		//System.out.println();
 		if(plays[0] > 21 || plays[1] > 21 || plays[2] > 21){
 			if(plays[0] > 21 && plays[1] == 0 && plays[2] == 0){ cpuDone = true; }
 			if(plays[0] > 21 && plays[1] > 21 && plays[2] == 0){ cpuDone = true; }
