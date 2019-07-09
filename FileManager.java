@@ -49,7 +49,7 @@ public class FileManager{
 					output.format("%s\n", oldString.get(i));
 				}
 			}
-			output.format("%-10s %s\n", textToBeAdded, result);	
+			output.format(result+"  "+textToBeAdded);	
 		}catch(FormatterClosedException formatterClosedException){
 			System.err.println( "Error writing to file." );
         	System.exit( 1 );

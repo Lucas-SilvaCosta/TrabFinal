@@ -16,7 +16,7 @@ public class FrameMenu extends JFrame{
 		super("Menu");
 
 		setLayout(new FlowLayout());
-		titulo = new JLabel("Titulo", SwingConstants.CENTER);
+		titulo = new JLabel("Cassino", SwingConstants.CENTER);
 		titulo.setFont(new Font("Serif", Font.PLAIN, 32));
 		//titulo.setMinimumSize(new Dimension(100, 400));
 		//titulo.setMaximumSize(new Dimension(100, 400));

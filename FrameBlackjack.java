@@ -371,13 +371,14 @@ public class FrameBlackjack extends JFrame{
 
 	public void fim(){
 		FrameFimBlackjack f;
+		String aux = vitorias+"V/"+empates+"E/"+derrotas+"D";
 		if(vitorias == derrotas){
-			f = new FrameFimBlackjack("Empate");
+			f = new FrameFimBlackjack("Empate", aux);
 		}else{
 			if(vitorias>derrotas){
-				f = new FrameFimBlackjack("Vitória");
+				f = new FrameFimBlackjack("Vitória", aux);
 			}else{
-				f = new FrameFimBlackjack("Derrota");
+				f = new FrameFimBlackjack("Derrota", aux);
 			}
 		}
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
